@@ -1,19 +1,25 @@
 {
   "name": "storybook",
+  "description": "storybook",
   "version": "0.1.0",
+  "license": "MIT",
+  "main": "src/index.js",
+  "repository": "https://github.com/fukuball/storybook.git",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "dist": "cross-env BABEL_ENV=production babel src -d dist"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.4",
     "@storybook/addon-actions": "^6.0.16",
     "@storybook/addon-essentials": "^6.0.16",
@@ -24,6 +30,8 @@
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
+    "babel-preset-vue": "^2.0.2",
+    "cross-env": "^7.0.2",
     "css-loader": "^4.2.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
@@ -52,5 +60,10 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "babel": {
+    "presets": [
+      "vue"
+    ]
+  }
 }
