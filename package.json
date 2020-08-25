@@ -3,7 +3,7 @@
   "description": "storybook",
   "version": "0.1.0",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "dist/storybook.common.js",
   "repository": "https://github.com/fukuball/storybook.git",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "dist": "cross-env BABEL_ENV=production babel src -d dist"
+    "dist": "./node_modules/.bin/vue-cli-service build --target lib --name storybook ./src/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -27,7 +27,7 @@
     "@storybook/vue": "^6.0.16",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@vue/cli-service": "^4.5.4",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-preset-vue": "^2.0.2",
