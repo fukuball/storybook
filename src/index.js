@@ -1,3 +1,9 @@
-export * from "./stories/Button.vue";
-export * from "./stories/Header.vue";
-export * from "./stories/Page.vue";
+import Button from './stories/Button';
+import Header from "./stories/Header";
+import Page from "./stories/Page";
+
+export {
+  Button,
+  Header,
+  Page
+}
